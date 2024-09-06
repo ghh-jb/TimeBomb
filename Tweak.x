@@ -37,7 +37,7 @@ kern_return_t shit_protect(vm_address_t addr, vm_size_t size)
 	return shit_vm_protect(mach_task_self_, addr, size, true, VM_PROT_READ | VM_PROT_EXECUTE);
 }
 
-#define UNPROTECT_COUNT 10000 // higher = more spinlocks
+#define UNPROTECT_COUNT 0 // higher = more spinlocks
 void triggerSpinlock(void)
 {
 	uint32_t execPathSize = PATH_MAX;
